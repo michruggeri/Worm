@@ -1,0 +1,32 @@
+
+START
+
+ restart    0
+
+ n_part     20
+ n_slices   50
+ mbar       30
+ mbridge    40
+ lambda     0.5
+ dim        2
+ side       30. 30.
+ T          0.5 
+
+ c0         15.5
+ shift      0.6 0.6 0.6
+ dr         0.25
+
+ harm
+ dipo       5.0 90.0
+ abc
+
+ blocks     100 0 5 500
+ nosup
+ seed       301
+
+END
+
+ nk         15
+ side       3 8.2 8.2 8.2 
+ max_part   64 
+ lennardj   10.22 2.556 
