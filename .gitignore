@@ -1,2 +1,5 @@
 *.o
 *.x
+testpot
+*.dat
+*.out
