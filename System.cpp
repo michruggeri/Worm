@@ -1,9 +1,3 @@
-#include <fstream>
-#include <iostream>
-#include <cstring>
-#include <iomanip>
-#include <cmath>
-
 #include "System.hpp"
 
 System::GetKin KinAndSup;
@@ -833,9 +827,9 @@ void System::Advance(){
   int m,tim,tim0,ind,ind0;
   double Pacc,Rand;
   m = RNG.Int_Random(1,MBar());
-  double xnew[m+1][2];
-  xnew[0][0] = LINKS[IRA[0]  ][IRA[1]  ].X1(0);
-  xnew[0][1] = LINKS[IRA[0]  ][IRA[1]  ].X1(1);
+  double xnew[m+1][DIM];
+  for(int i=0;i<DIM;i++)
+    xnew[0][i] = LINKS[IRA[0]  ][IRA[1]  ].X1(i);
   for(int i=0;i<m;i++){
     for(int j=0;j<DIM;j++){
       xnew[i+1][j] = RNG.Gauss_Random(xnew[i][j],Sigma());
@@ -890,13 +884,13 @@ void System::Recede(){
   m = RNG.Int_Random(1,MBar());
   if(m>=WLink()) return;
   double Pacc,Rand;
-  double xnew[m+1][2];
+  double xnew[m+1][DIM];
   int tim0=-1,tim;
   int ind0=-1,ind;
   tim = IRA[0];
   ind = IRA[1];
-  xnew[0][0] = LINKS[MASHA[0]][MASHA[1]].X0(0);
-  xnew[0][1] = LINKS[MASHA[0]][MASHA[1]].X0(1);
+  for(int i=0;i<DIM;i++)
+    xnew[0][i] = LINKS[MASHA[0]][MASHA[1]].X0(i);
   for(int i=1;i<m+1;i++){
     for(int j=0;j<DIM;j++){
       xnew[i][j] = RNG.Gauss_Random(xnew[i-1][j],Sigma());

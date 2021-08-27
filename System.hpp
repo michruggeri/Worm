@@ -1,6 +1,13 @@
 #ifndef SYSTEM__HPP
 #define SYSTEM__HPP
 
+#include <fstream>
+#include <iostream>
+#include <cstring>
+#include <iomanip>
+#include <cmath>
+
+
 #include "Link.hpp"
 #include "Random.hpp"
 #include "Potentials.hpp"
