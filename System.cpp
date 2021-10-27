@@ -9,6 +9,7 @@ System::System(char* input_name){
   Uint = NonInt;
   nint = abc;
   KinAndSup = &System::GetKin_0;
+  RNG = Random(time(nullptr));
   std::cout << "\nWorm canonical simulation, algorithm based on Boninsegni & Prokof'ef, Phys. Rev. E 74, 036701 (2006)\n\n";
   Read_Input(input_name);
   std::cout << "Initialializing arrays... ";
