@@ -19,7 +19,7 @@ from typing import Tuple
 
 def LoadData(quantity:str,filename:str) -> npt.ArrayLike:
     """
-    Reads data regarding the phyisical observable 'quantity' from a
+    Reads data regarding the physical observable 'quantity' from a
     Worm.x output file, and stores it in a numpy array with the block
     value, the overall average and the raw errorbar'.
     """
