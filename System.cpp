@@ -291,6 +291,9 @@ void System::Read_Input(char* filename){
     if(name=="harm"){
       Uext = Harm;
     };
+    if(name=="cigar"){
+      Uext = Cigar;
+    };
     if(name=="abc"){
       nint = abc;
       KinAndSup = &System::GetKin_SuperA;

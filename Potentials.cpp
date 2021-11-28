@@ -80,3 +80,15 @@ double Harm(double x[],int dim){
   u = 0.5*r2;
   return u;
 };
+
+
+// Trappola armonica 1D + Cos
+double Cigar(double x[],int dim){
+  double r0,r1;
+  double u;
+  r1 = x[1]*x[1];
+  r0 = x[0]*x[0];
+  u = 0.5*r0 +0.5 *30*r1- 1.*cos(5*x[0]);
+  return u;
+  
+};

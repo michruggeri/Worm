@@ -15,5 +15,6 @@ double Dip(double x[],double y[],int dim,double l[],double ecut,double cost[]);
 
 double Zero(double x[],int dim);
 double Harm(double x[],int dim);
+double Cigar(double x[],int dim);
 
 #endif
